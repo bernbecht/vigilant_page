@@ -4,8 +4,8 @@ $red: #F19181;
 
 /*--NORMALIZE--*/
 
-html{
-
+html,body{
+	// position:relative;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -25,7 +25,9 @@ ul{
 .section{
 	box-sizing:border-box;	
 	width:100%;
-	height:700px;
+	height:700px;	
+	position:fixed;
+	top:-910px;
 }
 
 .row{
@@ -36,6 +38,11 @@ ul{
 
 
 /*--DEFAULT--*/
+
+.scroller{
+	position:fixed;
+	top:0;
+}
 
 .sectionDescriptionCanvas{
 	background:$blue;
@@ -204,9 +211,11 @@ ul{
 #header{
 	color: white;
 	height: 800px;
-	background: url(image_path('bg_header.jpg')) fixed;
+	background: url(image_path('bg_header.jpg'));
 	background-size:100% 100%;
 	background-repeat: no-repeat;
+	top:0;
+	z-index:5;
 
 	.row {
 		position: absolute;
@@ -230,16 +239,21 @@ ul{
 
 #motivation{
 	height:800px;
+	z-index:2;
+	top:0;
 }
 
 #statistics{
 	margin-top:0;
 	background: white;
 	height: 900px;
+	z-index:3;
 }
 
 #about{
-	// height:700px;
+	height:700px;
+	overflow:hidden;
+	z-index:4;
 	.contentSectionCanvas{
 		background:$blue;
 	}
@@ -247,6 +261,7 @@ ul{
 
 #contact{
 	height:600px;
+	z-index:5;
 	.sectionDescriptionCanvas{
 		background:white;
 	}
