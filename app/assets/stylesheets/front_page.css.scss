@@ -25,7 +25,7 @@ ul{
 .section{
 	box-sizing:border-box;	
 	width:100%;
-	height:700px;	
+	height:800px;	
 	position:fixed;
 	top:-910px;
 }
@@ -47,8 +47,7 @@ ul{
 .sectionDescriptionCanvas{
 	background:$blue;
 	height:100%;
-	padding-top: 100px;
-
+	padding-top: 5%;
 }
 
 .sectionTitleCanvas{
@@ -71,13 +70,13 @@ ul{
 
 .sectionDataVisCanvas{
 	height:100%;
-	padding-top: 100px;
+	padding-top: 5%;;
 	
 }
 
 .sectionDataVisWrapper{
 	padding-left: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 3%;
 }
 
 .graphicDataCanvas{
@@ -113,14 +112,17 @@ ul{
 }
 
 .dataConclusionCanvas{
+	margin-bottom: 4%;
 	h2{
 		margin-top:0;
+		font-size:24px;
 	}
 }
 
 .graphLegendCanvas{
 	h2{
 		font-size: 16px;
+		margin-bottom: 1%;
 	}
 }
 
@@ -150,6 +152,9 @@ ul{
 .contentSectionCanvas{
 	height:100%;
 	padding-top: 100px;
+	img{
+		width:100%;
+	}
 
 }
 
@@ -185,24 +190,72 @@ ul{
 }
 
 .appDemonstrationCanvas{
+	position:relative;
+
 	li{
+		position:absolute;
 		width:100%;
 		margin-bottom:30px;
+		background:$blue;
+		//TO-DO: REMOVER quando arrumar glitch text aboutapp
+		padding-bottom:5%;
+	}
+
+	li:nth-child(1){
+		z-index:5;
+	}
+	li:nth-child(2){
+		z-index:4;
+	}
+	li:nth-child(3){
+		z-index:3;
+	}
+	li:nth-child(4){
+		z-index:2;
+	}
+	li:nth-child(5){
+		z-index:1;
 	}
 }
 
 .appDemonstrationImgCanvas{
-	width:30%;
-	margin: 0 auto;
+	width:100%;
+	margin-bottom:3%;
 	img{
-		width:100%;
+		width:40%;
+		  margin:0 auto;
+        display:block;
+
 	}
 }
 
 .appDemonstrationTextCanvas{
-	width:100%;
+	width:50%;
 	text-align:center;
+	margin:0 auto;
+	p{
+		font-size:16px;
+		text-align:center;
+	}
+	h2{
+		font-size:32px;
+	}
 }
+
+/*----Theme---*/
+.whiteTheme{
+	.sectionDescriptionCanvas{
+		background:white;
+	}
+	.sectionTitleCanvas{
+		h2{
+			color:$blue;
+		}
+		
+	}
+
+}
+
 
 
 /*----MODS----*/
@@ -246,13 +299,10 @@ ul{
 #statistics{
 	margin-top:0;
 	background: white;
-	height: 900px;
 	z-index:3;
 }
 
-#about{
-	height:700px;
-	overflow:hidden;
+#about{	overflow:hidden;
 	z-index:4;
 	.contentSectionCanvas{
 		background:$blue;
@@ -260,7 +310,6 @@ ul{
 }
 
 #contact{
-	height:600px;
 	z-index:5;
 	.sectionDescriptionCanvas{
 		background:white;
